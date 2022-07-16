@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a {
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        #div1 {
+            width: 50px;
+            height: 50px;
+            background-color: palegoldenrod;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a">
+        <input type="button" onclick="widthlength()" value="宽度">
+        <input type="button" onclick="heightlength()" value="高度">
+        <input type="button" onclick="colorlength()" value="颜色">
+        <input type="button" onclick="hidelength()" value="隐藏">
+        <input type="button" onclick="clearlength()" value="重置">
+        <div id="div1"></div>
+    </div>
+
+</body>
+<script>
+    // cssText 的本质就是设置 HTML 元素的 style 属性值。
+    var box = document.getElementById('div1')
+
+    function widthlength() {
+        box.style.width = '150px'
+    }
+
+    function heightlength() {
+        box.style.height = '150px'
+    }
+
+    function colorlength() {
+        box.style.backgroundColor = 'palevioletred'
+    }
+
+    function hidelength() {
+        box.style.display = 'none'
+    }
+
+    function clearlength() {
+        box.style.cssText = "background-color:palegoldenrod;width:50px;height:50px;"
+    }
+</script>
+
+</html>

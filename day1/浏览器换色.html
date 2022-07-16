@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            width: 20px;
+            height: 20px;
+            border: none;
+            background-color: paleturquoise;
+        }
+
+        .green {
+            width: 20px;
+            height: 20px;
+            border: none;
+
+            background-color: pink;
+        }
+
+        .block {
+            width: 20px;
+            height: 20px;
+            border: none;
+
+            background-color: plum;
+        }
+
+        ul {
+            width: 360px;
+            height: 20px;
+         display: flex;
+         justify-content: space-between;
+            background-color: aquamarine;
+            list-style: none;
+            border: solid 1px green;
+            color: green;
+            font-size: 12px;
+        }
+
+        li {
+         flex: 1;
+            text-align: center;
+            border-right: solid 1px white;
+            border-left: solid 1px white;
+        }
+
+        li:hover {
+            width: 10px;
+            height: 100%;
+            border-bottom: 1px solid #000;
+        }
+        #body{
+            width: 1000px;
+            height: 800px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <input type="button" value="1" class="red" onclick="redcolor()">
+    <input type="button" value="2" class="green" onclick="greencolor()">
+    <input type="button" value="3" class="block" onclick="blockcolor()">
+    <ul id="div1">
+        <li>新闻</li>
+        <li>娱乐</li>
+        <li>体育</li>
+        <li>电影</li>
+        <li>音乐</li>
+        <li>旅游</li>
+    </ul>
+</body>
+<script>
+    var body=document.getElementById('body')
+    var uk = document.getElementById('div1')
+    function redcolor() {
+        uk.style.backgroundColor = 'paleturquoise'
+        body.style.backgroundColor = 'paleturquoise'
+    }
+    function greencolor() {
+        uk.style.backgroundColor = 'pink'
+        body.style.backgroundColor = 'pink'
+    }
+    function blockcolor() {
+        uk.style.backgroundColor = 'plum'
+        body.style.backgroundColor = 'plum'
+    }
+</script>
+
+</html>
